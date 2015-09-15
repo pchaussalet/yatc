@@ -31,7 +31,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 console.log('https://api.twitter.com/oauth/authorize?' + response.body);
             });;
             this.homeProvider = new HomeProvider().init(this._twitterClient);
-            this..loginProvider = new LoginProvider().init(this._twitterClient);
+            this.loginProvider = new LoginProvider().init(this._twitterClient);
         }
     }
 });

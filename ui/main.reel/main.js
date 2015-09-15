@@ -32,6 +32,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             });;
             this.homeProvider = new HomeProvider().init(this._twitterClient);
             this.loginProvider = new LoginProvider().init(this._twitterClient);
+            
+            this.loginProvider.inputCode(6718285);
         }
     }
 });

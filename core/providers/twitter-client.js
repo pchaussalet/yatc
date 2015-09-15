@@ -20,7 +20,6 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
     
     constructor: {
         value: function TwitterClient() {
-            console.log(OAuth);
             this._serviceUrl = 'https://api.twitter.com/1.1';
             this._oauth = OAuth({
                 consumer: {

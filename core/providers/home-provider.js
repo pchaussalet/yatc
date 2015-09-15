@@ -7,7 +7,7 @@ var Montage = require("montage/core/core").Montage;
  * @extends Montage
  */
 exports.HomeProvider = Montage.specialize(/** @lends HomeProvider# */ {
-    _endpoint: {
+    _endpointUrl: {
         value: '/statuses/home_timeline.json'
     },
     

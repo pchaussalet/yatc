@@ -40,7 +40,8 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             };
             
             var token = {
-                public: ''
+                public: configuration.twitter.tokenPublic,
+                secret: configuration.twitter.tokenSecret
             };
             
             return request({

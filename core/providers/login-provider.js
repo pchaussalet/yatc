@@ -14,6 +14,7 @@ exports.LoginProvider = Montage.specialize(/** @lends LoginProvider# */ {
     init: {
         value: function(twitterClient) {
             this._twitterClient = twitterClient;
+            return this;
         }
     },
     

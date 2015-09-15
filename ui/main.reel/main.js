@@ -3,7 +3,8 @@
  */
 var Component = require("montage/ui/component").Component,
     TwitterClient = require('core/providers/twitter-client').TwitterClient,
-    HomeProvider = require('core/providers/home-provider').HomeProvider;
+    HomeProvider = require('core/providers/home-provider').HomeProvider,
+    LoginProvider = require('core/providers/login-provider').LoginProvider;
 
 /**
  * @class Main
@@ -11,6 +12,10 @@ var Component = require("montage/ui/component").Component,
  */
 exports.Main = Component.specialize(/** @lends Main# */ {
     _twitterClient: {
+        value: null
+    },
+    
+    loginProvider: {
         value: null
     },
     
@@ -26,6 +31,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 console.log('https://api.twitter.com/oauth/authorize?' + response.body);
             });;
             this.homeProvider = new HomeProvider().init(this._twitterClient);
+            this..loginProvider = new LoginProvider().init(this._twitterClient);
         }
     }
 });

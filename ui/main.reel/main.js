@@ -3,7 +3,7 @@
  */
 var Component = require("montage/ui/component").Component,
     TwitterClient = require('core/providers/twitter-client').TwitterClient,
-    HomeProvider = require('coe/providers/home-providers').HomeProvider;
+    HomeProvider = require('coe/providers/home-provider').HomeProvider;
 
 /**
  * @class Main

@@ -20,6 +20,16 @@
                 "tweet": {"<-": "@tweets:iteration.object"}
             }
         },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Title"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.title"}
+            }
+        },
         "tweets": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
@@ -41,7 +51,8 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Column blue-grey darken-3">
-        <ul data-montage-id="tweets" class=tweetsList>
+        <h1 data-montage-id="title"></h1>
+        <ul data-montage-id="tweets" class="tweetsList">
             <li data-montage-id="card1"></li>
         </ul>
     </div>

@@ -19,6 +19,7 @@ exports.HomeProvider = Montage.specialize(/** @lends HomeProvider# */ {
     init: {
         value: function(twitterClient) {
             this._twitterClient = twitterClient;
+            return this;
         }
     },
     

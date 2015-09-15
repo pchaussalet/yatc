@@ -23,7 +23,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                     method: 'GET',
                     url: 'https://baconipsum.com/api/?type=all-meat&sentences=1'
                 }).then(function(data) {
-                    console.log(data.body);
+                    console.log(JSON.parse(data.body));
                     /*
                     var tweet = {
                         author: 'Foo Bar',

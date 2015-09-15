@@ -3,7 +3,7 @@
  */
 var Montage = require("montage/core/core").Montage,
     request = require('montage/core/request'),
-    OAuth = require('oauth-1.0a').OAuth,
+    OAuth = require('oauth-1.0a'),
     configuration = require('core/configuration');
 /**
  * @class TwitterClient

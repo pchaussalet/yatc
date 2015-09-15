@@ -45,11 +45,16 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
 
     _request: {
         value: function(method, path, data) {
-            console.log(arguments);
+            var url;
+            if (path.substr(0, 1) === '/') {
+                url = this._serviceUrl + path;
+            } else {
+                url = path;
+            }
             
             var requestData = {
                 method: method,
-                url: this._serviceUrl + path,
+                url: url,
                 data: data
             };
             

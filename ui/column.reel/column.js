@@ -9,14 +9,14 @@ var Component = require("montage/ui/component").Component,
  * @extends Component
  */
 exports.Column = Component.specialize(/** @lends Column# */ {
-    _tweets: {
+    tweets: {
         value: null
     },
     
     constructor: {
         value: function Column() {
             var self = this;
-            this._tweets = [];
+            this.tweets = [];
             for (var i = 0; i < 10; i++) {
                 
                 request({
@@ -28,7 +28,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                         text: JSON.parse(data.body)[0].substr(0,140)
                     };
                     console.log(tweet);
-                    self._tweets.push(tweet);
+                    self.tweets.push(tweet);
                 }, function(error) {
                     console.warn(error);
                 });

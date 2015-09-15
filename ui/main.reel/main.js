@@ -26,14 +26,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this._twitterClient = new TwitterClient();
-            this._twitterClient.post('https://api.twitter.com/oauth/request_token?oauth_callback=oob')
-            .then(function(response) {
-                console.log('https://api.twitter.com/oauth/authorize?' + response.body);
-            });;
             this.homeProvider = new HomeProvider().init(this._twitterClient);
             this.loginProvider = new LoginProvider().init(this._twitterClient);
-            
-            this.loginProvider.inputCode(6718285);
         }
     }
 });

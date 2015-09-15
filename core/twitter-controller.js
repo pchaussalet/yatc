@@ -9,7 +9,11 @@ var Montage = require("montage/core/core").Montage;
 exports.TwitterController = Montage.specialize(/** @lends TwitterController# */ {
     constructor: {
         value: function TwitterController() {
-            this.super();
+        }
+    },
+    
+    init: {
+        value: function() {
         }
     }
 });

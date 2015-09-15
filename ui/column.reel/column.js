@@ -34,7 +34,6 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                 });
                 
             }
-            console.log(this._tweets);
         }
     }
 });

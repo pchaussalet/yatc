@@ -21,11 +21,14 @@ exports.Column = Component.specialize(/** @lends Column# */ {
         value: function Column() {
             var self = this;
             this.tweets = [];
-            this._loadTweets();
         }
     },
     
-    
+    enterDocument: {
+        value: function(firstTime) {
+            this._loadTweets();
+        }
+    },
     
     _loadTweets: {
         value: function() {

@@ -17,8 +17,16 @@ exports.Column = Component.specialize(/** @lends Column# */ {
         value: function Column() {
             var self = this;
             this.tweets = [];
-            for (var i = 0; i < 10; i++) {
-                
+            this._loadTweets();
+            setTimeout(function() {
+                self._loadTweets();
+            }, 2000);
+        }
+    },
+    
+    _loadTweets: {
+        value: function() {
+            for (var i = 0; i < 5; i++) {
                 request({
                     method: 'GET',
                     url: 'https://baconipsum.com/api/?type=all-meat&sentences=1'
@@ -31,7 +39,6 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                 }, function(error) {
                     console.warn(error);
                 });
-                
             }
         }
     }

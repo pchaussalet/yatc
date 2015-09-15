@@ -62,7 +62,7 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             
             return request({
                 method:  requestData.method,
-                path:    requestData.url,
+                url:    requestData.url,
                 data:    requestData.data,
                 headers: this._oauth.toHeader(this._oauth.authorize(requestData, token))
             });

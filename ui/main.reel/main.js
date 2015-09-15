@@ -21,7 +21,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this._twitterClient = new TwitterClient();
-            this.homeProvider = new HomeProvider();
+            this.homeProvider = new HomeProvider().init(this._twitterClient);
         }
     }
 });

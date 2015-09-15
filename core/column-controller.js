@@ -7,9 +7,18 @@ var Montage = require("montage/core/core").Montage;
  * @extends Montage
  */
 exports.ColumnController = Montage.specialize(/** @lends ColumnController# */ {
+    _columnType: {
+        value: null
+    },
+    
     constructor: {
         value: function ColumnController() {
-            this.super();
+        }
+    },
+    
+    init: {
+        value: function(columnType) {
+            this._columnType = columnType;
         }
     }
 });

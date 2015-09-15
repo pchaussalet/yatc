@@ -24,6 +24,19 @@
                 "value": {"<-": "@owner.tweet.author"}
             }
         },
+        "avatar": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "avatar"},
+                "contenteditable": "true",
+                "crossOrigin": null,
+                "dir": "ltr",
+                "draggable": "true"
+            },
+            "bindings": {
+                "src": {"<-": "@owner.tweet.avatar"}
+            }
+        },
         "text": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -43,6 +56,7 @@
 <body>
     <div data-montage-id="owner" class="blue-grey lighten-5 Card">
         <div class="row">
+            <img data-montage-id="avatar">
             <div data-montage-id="author" class="col s-8 offset-s1"></div>
         </div>
         <div data-montage-id="text"></div>

@@ -9,7 +9,6 @@ var Montage = require("montage/core/core").Montage;
 exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
     constructor: {
         value: function TwitterClient() {
-            this.super();
         }
     }
 });

@@ -13,7 +13,8 @@
         "card": {
             "prototype": "ui/card.reel",
             "properties": {
-                "element": {"#": "card1"}
+                "element": {"#": "card1"},
+                "contenteditable": "inherit"
             },
             "bindings": {
                 "tweet": {"<-": "@tweets:iteration.object"}
@@ -22,7 +23,8 @@
         "tweets": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
-                "element": {"#": "tweets"}
+                "element": {"#": "tweets"},
+                "contenteditable": "false"
             },
             "bindings": {
                 "content": {"<-": "@owner.tweets"}

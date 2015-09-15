@@ -34,6 +34,8 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                         text: data.substr(0,140}
                     });
                     */
+                }, function(error) {
+                    console.warn(error);
                 });
                 
             }

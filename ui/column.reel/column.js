@@ -32,8 +32,10 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                     method: 'GET',
                     url: 'https://baconipsum.com/api/?type=all-meat&sentences=1'
                 }).then(function(data) {
+                    var avatarSize = Math.round(150+(Math.random()*30));
                     var tweet = {
                         author: 'Foo Bar',
+                        avatar: 'http://fillmurray.com/' + avatarSize + '/' + avatarSize,
                         text: JSON.parse(data.body)[0].substr(0,140)
                     };
                     self.tweets.push(tweet);

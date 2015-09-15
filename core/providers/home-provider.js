@@ -9,7 +9,6 @@ var Montage = require("montage/core/core").Montage;
 exports.HomeProvider = Montage.specialize(/** @lends HomeProvider# */ {
     constructor: {
         value: function HomeProvider() {
-            this.super();
         }
     }
 });

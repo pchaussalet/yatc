@@ -27,7 +27,6 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                         author: 'Foo Bar',
                         text: JSON.parse(data.body)[0].substr(0,140)
                     };
-                    console.log(tweet);
                     self.tweets.push(tweet);
                 }, function(error) {
                     console.warn(error);

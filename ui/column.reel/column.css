@@ -5,3 +5,7 @@
     border: solid 1px silver;
     padding: 5px;
 }
+
+.tweetsList {
+    padding: 0;
+}

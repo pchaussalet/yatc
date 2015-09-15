@@ -23,6 +23,11 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                     method: 'GET',
                     url: 'https://baconipsum.com/api/?type=all-meat&sentences=1'
                 }).then(function(data) {
+                    var tweet = {
+                        author: 'Foo Bar',
+                        text: data[0].substr(0,140)
+                    };
+                    console.log(tweet);
                     /*
                     self._tweets.push({
                         author: 'Foo Bar', 

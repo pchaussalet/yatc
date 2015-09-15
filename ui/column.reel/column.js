@@ -9,6 +9,10 @@ var Component = require("montage/ui/component").Component,
  * @extends Component
  */
 exports.Column = Component.specialize(/** @lends Column# */ {
+    provider: {
+        value: null
+    },
+    
     tweets: {
         value: null
     },
@@ -18,31 +22,18 @@ exports.Column = Component.specialize(/** @lends Column# */ {
             var self = this;
             this.tweets = [];
             this._loadTweets();
-            setTimeout(function() {
-                self._loadTweets();
-            }, 2000);
         }
     },
+    
+    
     
     _loadTweets: {
         value: function() {
             var self = this;
-            for (var i = 0; i < 5; i++) {
-                request({
-                    method: 'GET',
-                    url: 'https://baconipsum.com/api/?type=all-meat&sentences=1'
-                }).then(function(data) {
-                    var avatarSize = Math.round(150+(Math.random()*30));
-                    var tweet = {
-                        author: 'Foo Bar',
-                        avatar: 'http://fillmurray.com/' + avatarSize + '/' + avatarSize,
-                        text: JSON.parse(data.body)[0].substr(0,140)
-                    };
-                    self.tweets.push(tweet);
-                }, function(error) {
-                    console.warn(error);
-                });
-            }
+            this.provider.get()
+            .then(function(data) {
+                self.tweets = JSON.parse(data);
+            });
         }
     }
 });

@@ -26,6 +26,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
     
     _loadTweets: {
         value: function() {
+            var self = this;
             for (var i = 0; i < 5; i++) {
                 request({
                     method: 'GET',

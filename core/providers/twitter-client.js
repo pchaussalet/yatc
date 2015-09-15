@@ -63,8 +63,6 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
                 secret: configuration.twitter.tokenSecret
             };
             
-            console.log(requestData);
-            
             return request({
                 method:  requestData.method,
                 url:    requestData.url,

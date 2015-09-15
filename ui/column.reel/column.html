@@ -9,12 +9,30 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card1"}
+            }
+        },
+        "tweets": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "tweets"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.tweets"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Column">
+        <ul data-montage-id="tweets">
+            <li data-montage-id="card1"></li>
+        </ul>
     </div>
 </body>
 </html>

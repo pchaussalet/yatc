@@ -21,7 +21,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this._twitterClient = new TwitterClient();
-            this._twitterClient.get('')
+            this._twitterClient.get('https://api.twitter.com/oauth/request_token?oauth_callback=twitterclient://callback');
             this.homeProvider = new HomeProvider().init(this._twitterClient);
         }
     }

@@ -22,6 +22,19 @@
             "bindings": {
                 "value": {"<-": "@owner.tweet.author"}
             }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.tweet.text"}
+            }
         }
     }
     </script>
@@ -29,6 +42,7 @@
 <body>
     <div data-montage-id="owner" class="Card">
         <div data-montage-id="author"></div>
+        <div data-montage-id="text"></div>
     </div>
 </body>
 </html>

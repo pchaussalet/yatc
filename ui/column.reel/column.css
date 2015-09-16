@@ -7,7 +7,8 @@ div.Column-header {
 
 button.Column-refresh,
 button.Column-refresh:hover,
-button.Column-refresh:active
+button.Column-refresh:active,
+button.Column-refresh:focus
 {
     background-color: transparent;
     border-width: 0;

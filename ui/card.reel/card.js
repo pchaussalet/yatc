@@ -18,6 +18,7 @@ exports.Card = Component.specialize(/** @lends Card# */ {
         },
         set: function(tweet) {
             this._tweet = tweet;
+            this.date = new Date(tweet.created_at);
         }
     },
     

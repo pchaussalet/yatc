@@ -12,6 +12,10 @@ div.Card-header {
     margin-bottom: 0;
 }
 
+.Card-avatar-container {
+    padding: 0;
+}
+
 .Card-name,
 .Card-account,
 .Card-date

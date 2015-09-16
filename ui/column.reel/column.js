@@ -42,7 +42,12 @@ exports.Column = Component.specialize(/** @lends Column# */ {
     
     handleRefreshAction: {
         value: function(event) {
-            this._loadTweets();            
+            var self = this;
+            this.progress.classList.remove('hide');
+            this._loadTweets()
+            .then(function() {
+                self.progress.classList.add('hide');
+            });
         }
     }
 });

@@ -12,6 +12,13 @@ div.Card-header {
     margin-bottom: 0;
 }
 
+.Card-name,
+.Card-account,
+.Card-date
+{
+    line-height: 1em;
+}
+
 .Card-name {
     font-weight: bold;
     font-size: medium;

@@ -20,12 +20,18 @@
                 "tweet": {"<-": "@tweets:iteration.object"}
             }
         },
-        "text": {
+        "refresh": {
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "refresh"},
                 "value": "loop"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "title": {
             "prototype": "montage/ui/text.reel",

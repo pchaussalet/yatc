@@ -31,9 +31,9 @@ exports.Column = Component.specialize(/** @lends Column# */ {
     },
     
     _loadTweets: {
-        value: function() {
+        value: function(sinceId) {
             var self = this;
-            return this.provider.get()
+            return this.provider.get(sinceId)
             .then(function(data) {
                 var tweets = JSON.parse(data);
                 for (var i = tweets.length-1; i >= 0; i--) {

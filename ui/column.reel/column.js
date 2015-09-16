@@ -40,7 +40,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
         }
     },
     
-    handleRefreshClick: {
+    handleRefreshAction: {
         value: function(event) {
             console.log(event);
         }

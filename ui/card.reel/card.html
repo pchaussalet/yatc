@@ -11,6 +11,18 @@
                 "contenteditable": "false"
             }
         },
+        "account": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "account"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "true"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.tweet.user.screen_name"}
+            }
+        },
         "author": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -22,16 +34,6 @@
             },
             "bindings": {
                 "value": {"<-": "@owner.tweet.user.name"}
-            }
-        },
-        "account": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "account"},
-                "contenteditable": "inherit"
-            },
-            "bindings": {
-                "value": {"<-": "@owner.tweet.user.screen_name"}
             }
         },
         "avatar": {
@@ -70,7 +72,9 @@
                 <img data-montage-id="avatar" class="circle responsive-image Card-avatar">
             </div>
             <div class="col valign">
-                <span data-montage-id="author"></span> @<span data-montage-id="account" class="Card-account"></span>
+                <span data-montage-id="author"></span>
+                @
+                <span data-montage-id="account" class="Card-account"></span>
             </div>
         </div>
         <div data-montage-id="text"></div>

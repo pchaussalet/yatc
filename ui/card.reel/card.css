@@ -14,8 +14,9 @@ div.Card-header {
 
 .Card-name {
     font-weight: bold;
+    font-size: medium;
 }
 
 .Card-account {
-    font-size: smaller;
+    font-size: small;
 }

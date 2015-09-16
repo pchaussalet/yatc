@@ -27,7 +27,14 @@
                 "contenteditable": "false",
                 "dir": "ltr",
                 "draggable": "false"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "title": {
             "prototype": "montage/ui/text.reel",
@@ -64,7 +71,9 @@
         <div class="row valign-wrapper Column-header">
             <h4 data-montage-id="title" class="blue-grey-text text-lighten-4 col s10 valign"></h4>
             <a data-montage-id="refresh">
-                <i class="medium material-icons">loop</i>
+                <i class="medium material-icons">
+                    loop
+                </i>
             </a>
         </div>
         <ul data-montage-id="tweets" class="Column-list">

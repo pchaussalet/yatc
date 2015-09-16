@@ -7,3 +7,7 @@ img.Card-avatar {
     width: 100%;
     max-width: 96px;
 }
+
+.Card-account: {
+    font-size: smaller;
+}

@@ -20,6 +20,12 @@
                 "tweet": {"<-": "@tweets:iteration.object"}
             }
         },
+        "progress": {
+            "prototype": "ui/progress.reel",
+            "properties": {
+                "element": {"#": "progress"}
+            }
+        },
         "refresh": {
             "prototype": "matte/ui/button.reel",
             "properties": {
@@ -78,6 +84,7 @@
                 </i>
             </button>
         </div>
+        <div data-montage-id="progress"></div>
         <ul data-montage-id="tweets" class="Column-list">
             <li data-montage-id="card1"></li>
         </ul>

@@ -16,6 +16,11 @@ button.Column-refresh:focus
     min-height: 4em;
     padding-top: 0.5em;
 }
+
 ul.Column-list {
     margin-top: 0;
+}
+
+div.Column-progress {
+    height: 4px;
 }

@@ -38,5 +38,11 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                 self.tweets = JSON.parse(data);
             });
         }
+    },
+    
+    handleRefreshClick: {
+        value: function(event) {
+            console.log(event);
+        }
     }
 });

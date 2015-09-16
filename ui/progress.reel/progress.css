@@ -1,3 +1,6 @@
-.Progress {
+div.Progress {
+    height: 4px;
+    padding-top: 0;
+    margin-bottom: 0;
 
 }

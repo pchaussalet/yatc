@@ -42,7 +42,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
     
     handleRefreshAction: {
         value: function(event) {
-            console.log(event);
+            this._loadTweets();            
         }
     }
 });

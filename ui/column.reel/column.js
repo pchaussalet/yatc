@@ -39,7 +39,6 @@ exports.Column = Component.specialize(/** @lends Column# */ {
                 for (var i = tweets.length-1; i >= 0; i--) {
                     self.tweets.unshift(tweets[i]);
                 }
-                self.tweets = self.tweets.concat(tweets);
                 return tweets;
             });
         }

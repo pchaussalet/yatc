@@ -8,13 +8,20 @@ var Component = require("montage/ui/component").Component;
  * @extends Component
  */
 exports.Card = Component.specialize(/** @lends Card# */ {
-    tweet: {
+    _tweet: {
         value: null
     },
     
-    date: {
+    tweet: {
         get: function() {
-            return new Date(this.tweet.created_at);
+            return this._tweet;
+        },
+        set: function(tweet) {
+            this._tweet = tweet;
         }
+    },
+    
+    date: {
+        value: null
     }
 });

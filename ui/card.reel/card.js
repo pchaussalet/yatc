@@ -8,9 +8,13 @@ var Component = require("montage/ui/component").Component;
  * @extends Component
  */
 exports.Card = Component.specialize(/** @lends Card# */ {
-    constructor: {
-        value: function Card() {
-            this.super();
+    tweet: {
+        value: null
+    },
+    
+    date: {
+        get: function() {
+            return new Date(this.tweet.created_at);
         }
     }
 });

@@ -24,6 +24,16 @@
                 "value": {"<-": "@owner.tweet.user.name"}
             }
         },
+        "account": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "account"},
+                "contenteditable": "inherit"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.tweet.user.screen_name"}
+            }
+        },
         "avatar": {
             "prototype": "digit/ui/image.reel",
             "properties": {
@@ -59,7 +69,9 @@
             <div class="col s2 valign">
                 <img data-montage-id="avatar" class="circle responsive-image Card-avatar">
             </div>
-            <div data-montage-id="author" class="col valign"></div>
+            <div class="col valign">
+                <span data-montage-id="author"></span> @<span data-montage-id="account"></span>
+            </div>
         </div>
         <div data-montage-id="text"></div>
     </div>

@@ -5,9 +5,15 @@ div.Column-header {
     margin-bottom: 0;
 }
 
-button.Column-refresh {
+button.Column-refresh,
+button.Column-refresh:hover,
+button.Column-refresh:active
+{
     background-color: transparent;
     border-width: 0;
+    height: 4em;
+    min-height: 4em;
+    padding-top: 0.5em;
 }
 ul.Column-list {
     margin-top: 0;

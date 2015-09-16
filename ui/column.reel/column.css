@@ -3,11 +3,14 @@
     padding-bottom: 0.5em;
 }
 
+div.Column-header {
+    margin-bottom: 0;
+}
+
 button.Column-refresh {
     background-color: transparent;
     border-width: 0;
 }
-
-.Column-header {
-    margin-bottom: 0;
+div.Column-list {
+    margin-top: 0;
 }

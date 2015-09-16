@@ -11,6 +11,19 @@
                 "contenteditable": "false"
             }
         },
+        "author": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "author"},
+                "contenteditable": "inherit",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.tweet.user.name"}
+            }
+        },
         "account": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -23,17 +36,16 @@
                 "value": {"<-": "'@' + @owner.tweet.user.screen_name"}
             }
         },
-        "author": {
+        "date": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "author"},
-                "contenteditable": "inherit",
+                "element": {"#": "date"},
+                "contenteditable": "false",
                 "dir": "ltr",
-                "draggable": "true",
-                "value": "Text"
+                "draggable": "true"
             },
             "bindings": {
-                "value": {"<-": "@owner.tweet.user.name"}
+                "value": {"<-": "@owner.date"}
             }
         },
         "avatar": {
@@ -74,6 +86,7 @@
             <div class="col valign">
                 <span data-montage-id="author" class="Card-name"></span>
                 <span data-montage-id="account" class="Card-account"></span>
+                <span data-montage-id="date" class="Card-date"></span>
             </div>
         </div>
         <div data-montage-id="text" class="flow-text"></div>

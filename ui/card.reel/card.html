@@ -20,7 +20,7 @@
                 "draggable": "true"
             },
             "bindings": {
-                "value": {"<-": "@owner.tweet.user.screen_name"}
+                "value": {"<-": "'@' + @owner.tweet.user.screen_name"}
             }
         },
         "author": {
@@ -73,7 +73,6 @@
             </div>
             <div class="col valign">
                 <span data-montage-id="author"></span>
-                @
                 <span data-montage-id="account" class="Card-account"></span>
             </div>
         </div>

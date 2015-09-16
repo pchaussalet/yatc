@@ -8,6 +8,10 @@ img.Card-avatar {
     max-width: 96px;
 }
 
+.Card-name {
+    font-weight: bold;
+}
+
 .Card-account {
     font-size: smaller;
 }

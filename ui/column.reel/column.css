@@ -24,4 +24,5 @@ ul.Column-list {
 div.Column-progress {
     height: 4px;
     padding-top: 0;
+    margin-bottom: 0;
 }

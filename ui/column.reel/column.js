@@ -33,7 +33,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
     _loadTweets: {
         value: function() {
             var self = this;
-            this.provider.get()
+            return this.provider.get()
             .then(function(data) {
                 self.tweets = JSON.parse(data);
             });

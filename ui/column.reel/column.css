@@ -11,6 +11,6 @@ button.Column-refresh {
     background-color: transparent;
     border-width: 0;
 }
-div.Column-list {
+ul.Column-list {
     margin-top: 0;
 }

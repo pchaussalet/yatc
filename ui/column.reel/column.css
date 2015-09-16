@@ -7,3 +7,7 @@ button.Column-refresh {
     background-color: transparent;
     border-width: 0;
 }
+
+.Column-header {
+    margin-bottom: 0;
+}

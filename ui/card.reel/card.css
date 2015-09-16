@@ -12,8 +12,8 @@ div.Card-header {
     margin-bottom: 0;
 }
 
-div.Card-avatar-container {
-    padding: 0;
+.Card-avatar-container {
+    padding: 0 !important;
 }
 
 .Card-name,

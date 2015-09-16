@@ -35,18 +35,22 @@ exports.Column = Component.specialize(/** @lends Column# */ {
             var self = this;
             return this.provider.get()
             .then(function(data) {
-                self.tweets = JSON.parse(data);
+                var tweets = JSON.parse(data);
+                self.tweets = tweets;
+                return tweets;
             });
         }
     },
     
     handleRefreshAction: {
         value: function(event) {
+            console.log('refresh');
             var self = this;
             this.progress.classList.remove('hide');
             this._loadTweets()
-            .then(function() {
+            .then(function(tweets) {
                 self.progress.classList.add('hide');
+                console.log('loaded', tweets.length, 'tweets');
             });
         }
     }

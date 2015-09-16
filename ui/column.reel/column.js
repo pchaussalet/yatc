@@ -36,7 +36,7 @@ exports.Column = Component.specialize(/** @lends Column# */ {
             return this.provider.get()
             .then(function(data) {
                 var tweets = JSON.parse(data);
-                self.tweets = tweets;
+                self.tweets = self.tweets.concat(tweets);
                 return tweets;
             });
         }

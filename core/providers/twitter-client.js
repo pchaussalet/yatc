@@ -32,8 +32,8 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
     },
     
     get: {
-        value: function(path) {
-            return this._request('GET', path);
+        value: function(path, params) {
+            return this._request('GET', path, null, params);
         }
     },
 
@@ -44,12 +44,23 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
     },
 
     _request: {
-        value: function(method, path, data) {
+        value: function(method, path, data, params) {
             var url;
             if (path.substr(0, 1) === '/') {
                 url = this._serviceUrl + path;
             } else {
                 url = path;
+            }
+            
+            params = params || {};
+            var options = [];
+            for (var i = 0; i < Object.keys(params); i++) {
+                var name = Object.keys(params)[i],
+                    value = params[name];
+                options.push(name + '=' + value);
+            }
+            if (options.length > 0) {
+                url += '?' + options.join('&');
             }
             
             var requestData = {
@@ -66,7 +77,7 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             return request({
                 method:  requestData.method,
                 url:    requestData.url,
-                data:    requestData.data,
+                data:    requestDa12ta.data,
                 headers: this._oauth.toHeader(this._oauth.authorize(requestData, token))
             });
         }

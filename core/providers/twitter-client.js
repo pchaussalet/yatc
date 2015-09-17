@@ -33,6 +33,7 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
     
     get: {
         value: function(path, params) {
+            console.log(params);
             return this._request('GET', path, null, params);
         }
     },
@@ -62,6 +63,7 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             if (options.length > 0) {
                 url += '?' + options.join('&');
             }
+            console.log(url);
             
             var requestData = {
                 method: method,

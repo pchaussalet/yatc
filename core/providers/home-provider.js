@@ -24,8 +24,9 @@ exports.HomeProvider = Montage.specialize(/** @lends HomeProvider# */ {
     },
     
     get: {
-        value: function() {
-            return this._twitterClient.get(this._endpointUrl)
+        value: function(sinceId) {
+            var params = sinceId ? { since_id: sinceId } : {};
+            return this._twitterClient.get(this._endpointUrl, params)
             .then(function(response) {
                 return response.body;
             });

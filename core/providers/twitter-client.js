@@ -55,7 +55,7 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             
             params = params || {};
             var options = [];
-            for (var i = 0; i < Object.keys(params); i++) {
+            for (var i = 0; i < Object.keys(params).length; i++) {
                 var name = Object.keys(params)[i],
                     value = params[name];
                 options.push(name + '=' + value);
@@ -63,7 +63,6 @@ exports.TwitterClient = Montage.specialize(/** @lends TwitterClient# */ {
             if (options.length > 0) {
                 url += '?' + options.join('&');
             }
-            console.log(url);
             
             var requestData = {
                 method: method,

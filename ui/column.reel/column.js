@@ -49,7 +49,8 @@ exports.Column = Component.specialize(/** @lends Column# */ {
             console.log('refresh');
             var self = this;
             this.progress.classList.remove('hide');
-            var sinceId = this.tweets.length > 0 ? this.tweets[0].id : null
+            var sinceId = this.tweets.length > 0 ? this.tweets[0].id : null;
+            console.log(this.tweets[0]);
             this._loadTweets(sinceId)
             .then(function(tweets) {
                 self.progress.classList.add('hide');
